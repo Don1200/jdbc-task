@@ -13,15 +13,22 @@ public class Main {
         UserService userService = new UserServiceImpl();
         userService.createUsersTable();
 
-        User user1 = new User("Ivan", "Ivanov", (byte) 9);
-        User user2 = new User("Petr","Petrov", (byte) 10);
-        User user3 = new User("Fedor", "Sumkin", (byte) 7);
-        userService.saveUser(user1.getName(), user1.getLastName(), user1.getAge());
-//        userService.dropUsersTable();
+        userService.saveUser("Ivan", "Ivanov", (byte) 20);
+        userService.saveUser("Petr","Petrov", (byte) 21);
+        userService.saveUser("Fedor", "Sumkin", (byte) 22);
+        userService.saveUser("Alexei", "Alekseev", (byte) 23);
+
+        System.out.println(userService.getAllUsers());
+
+        userService.dropUsersTable();
 
 
 
 
-        }
+
+
+
+
+    }
     }
 
